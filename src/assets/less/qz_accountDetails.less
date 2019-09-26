@@ -1,0 +1,78 @@
+
+//顶部分类
+.qz_detail_Tab{
+  position:fixed;left:0;.w_tops(88);z-index: 11;width:100%;background: #fff;border-top:1px solid #ebebeb;
+  .w_h(72);.w_d_f;
+  .tab_txt{
+    margin:0 auto;text-align: center;.w_fs(30);color:#333;.w_lh(72);border-bottom:2px solid #fff;width: auto !important;
+    &.txt_active{
+      color:#e61817;border-bottom:2px solid #e61817;
+    }
+  }
+}
+//内容块
+.qz_detail_Cons{
+  //height: calc(100vh - 88px);
+  //._v-container{
+  //  .w_tops(160)!important;
+  //}
+  .w_mt(160);
+}
+
+.qz_accountBox{
+  width:100%;
+  .qz_account_bigLis{
+    .qz_biglis_data{
+      .w_h(75);.w_fs(28);color:#333;background: #f6f6f6;.w_lh(75);.w_p_all(0,23);
+    }
+    .qz_smalLis{
+      background: #fff;.w_p_all(0,23);.w_d_f;
+      i{
+        display: block;font-style: normal;width:17%;text-align:left;
+        &:before{
+          .w_fs(180) !important;.w_lh(110);display: block;
+        }
+        &.qz_ac_icon01{
+          .w_icon_acc01(#333);
+          &:before{
+            .w_c_fx(#e61817,#e51459);
+          }
+        }
+        &.qz_ac_icon02{
+          .w_icon_acc02(#333);
+          &:before{
+            .w_c_fx(#2e94dd,#49abf1);
+          }
+        }
+        &.qz_ac_icon03{
+          .w_icon_acc03(#333);
+          &:before{
+            .w_c_fx(#f15d0f,#fb681b);
+          }
+        }
+      }
+      .qz_list_rigs{
+        width:83%;border-bottom:1px solid #ebebeb;.w_p_all(25,0);
+        .qz_list_txts{
+          .w_d_f;
+          span,label{display: block;color:#333;.w_fx_ol;}
+          span{
+            width:70%;text-align: left;.w_fs(28);
+          }
+          label{
+            width:30%;text-align: right;.w_fs(30);
+          }
+          &.qz_list_txts2{.w_mt(15);
+            label,span{color:#999;.w_fs(24);}
+            span{width:60%;}label{width:40%;}
+          }
+        }
+      }
+      &:last-child{
+        .qz_list_rigs{
+          border:0;
+        }
+      }
+    }
+  }
+}

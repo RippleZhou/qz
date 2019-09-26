@@ -1,0 +1,11 @@
+export const SET_AUTH = "setAuth";
+export const SET_ERROR = "setError";
+export const CLEAR_ERROR = "clearError";
+export const SET_WALLET = "setWallet";
+export const SET_USER = "setUser";
+export const SET_WITHDRAW = "setWithdraw";
+export const SET_ORDERS = "setOrders";
+export const SET_INCOME = "setIncome";
+export const SET_WITHDRAWCASH = "setWithdraw";
+export const SET_CAPTCHA = "setCaptcha";
+export const SET_USERPAYPW = 'getUserPayPw' //查询是否设置支付密码

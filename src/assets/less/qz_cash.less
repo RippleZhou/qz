@@ -1,0 +1,66 @@
+//提现
+.qz_cash_list{
+  border-bottom:1px solid #ebebeb;.w_h(76);.w_mt(45);.w_d_f;.w_lh(76);
+  input{widht:60%;text-align: left;.w_fs(32);color:#333;
+    .d_fgs;.w_h(76);
+  }
+  b{
+    .w_fs(46);color:#333;width:8%;font-weight: bold;
+    display: block;
+  }
+  span{
+    display: block;widht:30%;text-align: right;.w_fs(24);color:#999;
+    .w_icon_right(#999);
+    &:after{
+      display:inline-block;.w_fs(50) !important;vertical-align:middle;.w_mt(-10);.w_ml(10);
+    }
+  }
+  label{
+    display: block;width:10%;
+    .w_icon_zfb(#639dd4);
+    &:before{
+      display: block;.w_fs(100) !important;vertical-align:middle;.w_mt(-5);.w_ml(4);
+    }
+  }
+}
+.qz_cash_tips{
+  text-align: left;.w_fs(24);color:#999;.w_lh(60);
+}
+.qz_cash_btns{
+  width:100%;.w_fs(34);color:#fff;text-align: center;background: #e61817;.w_mt(50);.w_h(80);.w_lh(80);.w_b_r(10);
+}
+
+.pwPop_tit{
+  .w_fs(30);color:#333;.w_h(80);.w_lh(80);width:100%;text-align: center;border-bottom:1px solid #ebebeb;
+  .w_mb(30);
+}
+.pwPop_links{
+  width:100%;.w_p_all(30,20);.w_fs(24);color:#333;text-align: right;
+}
+
+////提现成功
+.qz_sucBox{
+  border-top:1px solid #ebebeb;
+  .qz_sucCons{
+    text-align: center;.w_pt(70);
+    h2{
+      .w_fs(34);color:#333;.w_mb(45);
+      .w_icon_yes(#fff);
+      &:before{
+       .w_w(130);.w_h(130);.w_b_r(130);background:#e61817;display:block;margin:0 auto;.w_mb(45);color:#fff;
+        .w_fs(160)!important;font-weight: normal;.w_lh(120);
+      }
+    }
+    p{
+      .w_fs(24);color:#999;
+    }
+    &.qz_errorCon{
+      h2{
+        .w_icon_error(#fff);
+        &:before{
+          .w_fs(130)!important;
+        }
+      }
+    }
+  }
+}

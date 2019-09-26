@@ -1,0 +1,75 @@
+@import "../font/font.css";//引入外部字体文件
+@import "template/publics";
+@import "qz_login";//登录
+@import "qz_cash";//提现
+@import "qz_order";//订单
+@import "qz_accountDetails";//账户明细
+@import "qz_user";//我的
+
+body{
+  background:#fff;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*{
+  box-sizing: border-box;-webkit-box-sizing: border-box;
+  outline: none;margin:0;padding:0;
+}
+ul,li,ol{list-style:none;}
+a,a:hover{text-decoration:none;color:#333;
+  display: inline-block;}
+h1,h2,h3,h4,h5,h6,b{font-weight:normal;}
+b,i,s,span,label{
+  font-style: normal;
+  display: inline-block;}
+input,button,textarea{
+  background:transparent;border:0;
+}
+textarea{
+  font-family:Microsoft Yahei,SimSun,Helvetica,Adobe 黑体 Std;
+}
+
+footer{
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  height: calc(.8rem + var(--safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom) *2);
+}
+
+.headers{
+  .w_d_f;width:100%;left:0;top:0;.w_h(88);background: #fff;z-index: 10;
+  position:fixed;
+  a,a:hover{
+    display: block;width:12%;position:absolute;top:0;text-align:center;
+    &.head_lefts{
+      left:0;
+      .w_icon_left(#333);
+    }
+    &:before{
+      display: block;vertical-align:middle;.w_lh(80);
+    }
+    .head_rights{
+      right:0;
+      .w_icon_right(red);
+    }
+    &:after{
+      display: block;vertical-align:middle;.w_lh(80);
+    }
+  }
+  .head_cons{
+    width:70%;margin:0 auto;text-align: center;.w_fs(36);color:#333;
+    font-weight:bold;.w_lh(88);
+  }
+}
+
+.qz_suc_topTxt{
+  width:15%;text-align: center;position: absolute;right:0;top:0;.w_lh(88);z-index: 11;.w_fs(32);color:#999;
+}
+
+.qz_boxs{
+  .w_mt(88);
+}
+.qz_topBor{
+  border-top:10px solid #f6f6f6;.w_p_all(0,25);
+}
+
+._v-container{
+  position: relative !important;
+}

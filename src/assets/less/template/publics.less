@@ -1,0 +1,149 @@
+@import "fonts.less";//公共字体
+
+.w_d_f{display:flex;display:-webkit-flex; /* Safari */display: -ms-flexbox;}
+.d_fgs{flex-grow: 1;-webkit-flex-grow: 1;-webkit-box-flex-group: 1;}
+.d_fws{flex-wrap: wrap;-ms-flex-wrap: wrap;-webkit-flex-wrap: wrap;}
+
+//背景渐变颜色-左右
+.w_c_bg(@StarCol,@EndCol){
+  background: -webkit-linear-gradient(left, @StarCol , @EndCol); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, @StarCol, @EndCol); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, @StarCol, @EndCol); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, @StarCol , @EndCol); /* 标准的语法 */
+}
+//上下
+.w_c_bgUD(@StarCol,@EndCol){
+  background: -webkit-linear-gradient(top, @StarCol , @EndCol); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom, @StarCol, @EndCol); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom, @StarCol, @EndCol); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom, @StarCol , @EndCol); /* 标准的语法 */
+}
+//字体渐变颜色
+.w_c_fx(@StarCol,@EndCol){
+  //background-image:-webkit-gradient(linear, left top, left bottom, from(@StarCol), to(@EndCol));
+  background-image: linear-gradient(to right, @StarCol, @EndCol);background-image:-webkit-linear-gradient(to right, @StarCol, @EndCol);
+  -webkit-background-clip: text;-webkit-text-fill-color: transparent;
+}
+
+//标题显示一行，多余的...
+.w_fx_ol{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+//标题显示两行，多余的...
+.w_fx_ml{text-overflow: ellipsis;overflow:hidden;-webkit-box-orient: vertical;display:-webkit-box;-webkit-line-clamp: 2;}
+
+.w_fs(@px){//字体大小
+  font-size: unit(@px / 32, rem);
+}
+.w_w(@px){//宽度
+  width:unit(@px/32,rem);
+}
+.w_h(@px) {//高度
+  height: unit(@px / 32, rem);
+}
+.w_lh(@px) {//行高
+  line-height: unit(@px / 32, rem);
+}
+
+.w_mt(@px) {//margin-Top
+  margin-top: unit(@px / 32, rem);
+}
+.w_ml(@px) {//margin-Left
+  margin-left: unit(@px / 32, rem);
+}
+.w_mr(@px) {//margin-Right
+  margin-right: unit(@px / 32, rem);
+}
+.w_mb(@px) {//margin_bottom
+  margin-bottom: unit(@px / 32, rem);
+}
+.w_m_all(@px,@px2) {//margin:0 0
+  margin:unit(@px / 32, rem) unit(@px2 / 32, rem);
+}
+
+.w_pt(@px) {//padding-top
+  padding-top: unit(@px / 32, rem);
+}
+.w_pl(@px) {//padding-left
+  padding-left: unit(@px / 32, rem);
+}
+.w_pr(@px) {//padding-right
+  padding-right: unit(@px / 32, rem);
+}
+.w_pb(@px) {//padding-bottom
+  padding-bottom: unit(@px / 32, rem);
+}
+.w_p_all(@px,@px2){//padding:
+  padding:unit(@px / 32, rem) unit(@px2 / 32, rem);
+}
+.w_m_lh(@px){//min-height:
+  min-height:unit(@px / 32, rem);
+}
+.w_m_wh(@px){//min-width:
+  min-width:unit(@px / 32, rem);
+}
+.w_max_lh(@px){//max-height:
+  max-height:unit(@px / 32, rem);
+}
+
+.w_b_r(@px){//圆角
+ border-radius:unit(@px/32,rem);
+}
+.w_tops(@px){
+  top: unit(@px / 32, rem);
+}
+.w_bottoms(@px){
+  bottm: unit(@px / 32, rem);
+}
+.w_letfs(@px){
+  left: unit(@px / 32, rem);
+}
+.w_rights(@px){
+  right: unit(@px / 32, rem);
+}
+
+//
+//
+//.checkSels{
+//  i{.w_d_b;width:100%;
+//    &:before{content: '';
+//      .w_d_b;.w_w(50);.w_h(50);border:1px solid @lineThinColor;.w_b_r(50);
+//    }
+//    &.checkNosel{
+//      content: '';
+//    }
+//    &.checkselsel{
+//      &:before{
+//        background:@bgRedColor;border-color:@lineRedColor;
+//        .w_lh(50);.w_t_c;.w_fs(70) !important;
+//      }
+//      .w_icon_checkSel(@txtWhileColor);
+//    }
+//  }
+//}
+
+.w_grayBgBox{
+  width:100%;height:100%;background:#f2f2f2;position:absolute;
+}
+.w_confirm_mt{
+  .w_mt(20);
+}
+.w_confirm_mb{
+  .w_mb(20);
+}
+
+
+
+.vux-tab-ink-bar{
+  background-color:transparent !important;
+  .vux-tab-bar-inner{
+    background:#fff;
+  }
+}
+
+//分享时弹的
+.dialogNobgs{
+  .weui-dialog{
+    width:100%;height:100%;background-color:transparent !important;max-width: 100%;
+  }
+  img{width:100%};
+}
+

@@ -1,0 +1,214 @@
+.w_grayBgBox {
+  .qz_userHeader {
+    .w_c_bgUD(#e63561, #e63427);
+    width: 100%;
+    .w_h(260);
+    .w_b_r(80);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .qz_userTops {
+      .w_h(88);
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 11;
+      background: #e63452;
+
+      a,
+      a:hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 12%;
+        text-align: center;
+
+        &.head_lefts {
+          left: 0;
+          .w_icon_left(#fff);
+        }
+
+        &:before {
+          display: block;
+          vertical-align: middle;
+          .w_lh(80);
+        }
+
+        &.head_right {
+          right: 0;
+          top: 12px;
+          color: #fff;
+          // .w_icon_right(#999);
+        }
+      }
+
+      h2 {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        .w_fs(36);
+        color: #fff;
+        font-weight: bold;
+        .w_lh(88);
+      }
+    }
+  }
+}
+
+.qz_userCons {
+  width: 100%;
+  .w_p_all(20, 20);
+  .w_mt(-160);
+
+  .qz_user_infors {
+    background: url("https://zhkj.oss-cn-shanghai.aliyuncs.com/wuY/qz_userTop.png") left no-repeat;
+    background-size: 100% 100%;
+    .w_h(305);
+    .w_p_all(25, 0);
+
+    h2 {
+      .w_fs(28);
+      color: #fff;
+      .w_mb(15);
+      .w_p_all(0, 45);
+    }
+
+    .qz_user_inMons {
+      color: #fff;
+      .w_d_f;
+      .w_p_all(0, 45);
+
+      span {
+        width: 76%;
+        display: block;
+        text-align: left;
+        .w_fs(24);
+
+        b {
+          .w_fs(46);
+        }
+      }
+
+      a,
+      a:hover {
+        width: 18%;
+        text-align: center;
+        margin: 0 3%;
+        .w_fs(22);
+        color: #fff;
+        border: 1px solid #fff;
+        .w_h(42);
+        .w_lh(38);
+        .w_b_r(42);
+        .w_mt(10);
+      }
+    }
+
+    .qz_user_txts {
+      .w_d_f;
+      .w_mt(50);
+
+      .qz_user_lis {
+        width: 35%;
+        text-align: center;
+        position: relative;
+
+        span {
+          display: block;
+          .w_fs(28);
+          color: #fff;
+
+          &:first-child {
+            .w_mb(15);
+          }
+        }
+
+        a,
+        a:hover {
+          .w_fs(22);
+          display: block;
+          color: #fff;
+          .w_icon_right(#fff);
+
+          &:after {
+            .w_fs(40) !important;
+            display: inline-block;
+            .w_ml(5);
+            .w_mt(-8);
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          .w_tops(20);
+          background: #ebebeb;
+          .w_h(22);
+          .w_w(2);
+          display: block;
+        }
+
+        &:first-child {
+          width: 30%;
+
+          &:before {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .qz_user_orders {
+    .w_pt(30);
+
+    .qz_user_oTit {
+      .w_d_f;
+      .w_h(80);
+
+      label {
+        display: block;
+        width: 70%;
+        text-align: left;
+        .w_fs(28);
+        color: #333;
+        .w_lh(80);
+      }
+
+      a,
+      a:hover {
+        display: block;
+        width: 30%;
+        text-align: right;
+        .w_fs(24);
+        color: #999;
+        .w_lh(80);
+        .w_icon_right(#999);
+
+        &:after {
+          .w_fs(50) !important;
+          display: inline-block;
+          .w_ml(8);
+          .w_mt(-10);
+        }
+      }
+    }
+  }
+}
+
+.qz_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .qz_register {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.noListTxt{
+  width:100%;text-align: center;.w_fs(24);color:#666;.w_fs(26);.w_lh(60);
+}

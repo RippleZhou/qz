@@ -1,0 +1,15 @@
+export const SIGN_IN = 'login'
+export const SIGN_OUT = 'logout'
+export const SIGN_UP = 'register'
+export const CHECK_AUTH = 'checkAuth'
+export const GET_WALLET = 'getWallet'
+export const GET_WITHDRAW = 'getWithDraw'
+export const GET_INCOME = 'getIncome'//收支列表
+export const GET_ORDERS = 'getOrders'
+export const GET_CAPTCHA = 'getCaptcha'
+export const GET_STOREACCOUNTINFO = 'getStore AccountInfo'
+export const GET_WITHDRAWCASH = 'withdrawCash' //申请提现
+export const GET_USERPAYPW = 'userPayPw' //查询是否设置支付密码
+export const GET_TODAYLIST='getTodaylist'//订单列表
+export const GET_PAY_PW='getPayPw'//设置支付密码
+export const GET_MODIFY_PAY_PW='getModifyPayPw'//修改支付密码

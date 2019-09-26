@@ -1,0 +1,57 @@
+
+.w_f_family{
+  font-family:w_fonts  !important;
+  font-weight: normal;
+  font-style:normal;
+}
+.w_icon_before(@codes,@color){
+  &:before{
+    .w_f_family;
+    content: @codes;
+    color: @color;
+    .w_fs(80);vertical-align:middle;
+  }
+}
+.w_icon_after(@codes,@color){
+  &:after{
+    .w_f_family;
+    content: @codes;
+    color: @color;
+    .w_fs(80);vertical-align:middle;
+  }
+}
+/**上下左右**/
+.w_icon_up(@color){
+  .w_icon_before("\E001",@color);
+}
+.w_icon_down(@color){
+  .w_icon_before("\E002",@color);
+}
+.w_icon_left(@color){
+  .w_icon_before("\E004",@color);
+}
+.w_icon_right(@color){
+  .w_icon_after("\E003",@color);
+}
+
+
+.w_icon_zfb(@color){//支付宝
+  .w_icon_before("\E163",@color);
+}
+
+.w_icon_yes(@color){//对
+  .w_icon_before("\E062",@color);
+}
+.w_icon_error(@color){//错
+  .w_icon_before("\E118",@color);
+}
+
+.w_icon_acc01(@color){
+  .w_icon_before("\E289",@color);
+}
+.w_icon_acc02(@color){
+  .w_icon_before("\E290",@color);
+}
+.w_icon_acc03(@color){
+  .w_icon_before("\E291",@color);
+}
