@@ -8,7 +8,7 @@
     <!-- 密码输入框 -->
     <van-password-input
       :value="value"
-      info="密码为 6 位数字"
+      info=""
       :focused="showKeyboard"
       @focus="showKeyboard = true"
     />
@@ -26,9 +26,6 @@
 <script>
 import { mapGetters } from "vuex";
 import Headers from "@/components/Headers";
-import { Toast } from "vant";
-import { GET_PAY_PW } from "@/store/actions.type";
-import signJs from "@/utils/sign";
 export default {
   name: "setPaypw",
   data() {
@@ -42,30 +39,7 @@ export default {
   watch: {
     value(newVal) {
       if (newVal.length === 6) {
-        Toast.loading({
-          mask: true,
-          message: "设置中..."
-        })
-        let {userCode,cellPhone}=this.user
-        let config={
-            userCode,cellPhone,payPassWord:newVal,type:'0',isSettingPayPw:'0'
-        }
-        config = signJs.miscellaneous.signedParams(config);
-        this.$store
-            .dispatch(GET_PAY_PW, config)
-            .then((res) => {
-                if(res.status=="OK"){
-                    Toast('支付密码设置成功！');
-                    setTimeout(function(){
-                        this.$router.go(-1);
-                    },2000)
-                }else{
-                    Toast(res.message);
-                }
-            })
-            .catch(data => {
-                console.log(data);
-            });
+          this.$router.push("/setPawpwNext?oldVal="+newVal)
       }
     }
   },

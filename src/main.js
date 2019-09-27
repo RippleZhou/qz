@@ -26,9 +26,8 @@ router.beforeEach((to, from, next) => {
   if (user) {
     store.commit(SET_AUTH, JSON.parse(user));
     next();
-  } else if (to.name == "FindPassword") {
-    console.log("未登录")
-    next("/findPassword");
+  } else if (to.name !== "login") {
+    next("/login");
   }
   next();
 });

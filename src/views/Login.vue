@@ -65,7 +65,7 @@ export default {
     forgotPsd() {
       console.log(1112)
       let _this = this
-      _this.$router.push('/FindPassword')
+      _this.$router.push('/findPassword')
     }
   }
 }

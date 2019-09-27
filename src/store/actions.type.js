@@ -13,3 +13,5 @@ export const GET_USERPAYPW = 'userPayPw' //查询是否设置支付密码
 export const GET_TODAYLIST='getTodaylist'//订单列表
 export const GET_PAY_PW='getPayPw'//设置支付密码
 export const GET_MODIFY_PAY_PW='getModifyPayPw'//修改支付密码
+export const GET_FIND_PAY_PW='getFindPayPw'//找回支付密码
+export const GET_CHECK_TOKEN='getCheckToken'//找回支付密码

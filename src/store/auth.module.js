@@ -2,13 +2,12 @@ import {
   SIGN_IN,
   GET_USERPAYPW,
   GET_PAY_PW,
-  PASSWORD_RESET,
   GET_STOREACCOUNTINFO,
   GET_CAPTCHA,
-  GET_MODIFY_PAY_PW
+  GET_MODIFY_PAY_PW,
+  GET_FIND_PAY_PW,
 } from "./actions.type";
 import {
-  SET_USERPAYPW,
   SET_AUTH,
   SET_ERROR,
   CLEAR_ERROR
@@ -120,12 +119,11 @@ export const actions = {
       });
   },
   // 设置用户支付密码
-  [GET_PAY_PW]({commit},credentials){
+  [GET_PAY_PW]({commit,state},credentials){
     return ApiService.post('/user/saveUserPayPw',credentials).then(({data})=>{
       if(data.status=="OK"){
-          const userInfo = Object.assign({}, data.message, {
-              sign: data.params.sign
-          });
+          const userInfo = state.user
+          userInfo.isSettingPayPw =data.message.isSettingPayPw
           commit(SET_AUTH, userInfo);
       }
       return data
@@ -134,11 +132,17 @@ export const actions = {
   //修改支付密码
   [GET_MODIFY_PAY_PW]({commit},credentials){
       return ApiService.post('/user/modifyWithdrawPassword',credentials).then(({data})=>{
-          if(data.status=="OK"){
-              // const userInfo = Object.assign({}, data.message, {
-              //     sign: data.params.sign
-              // });
-              // commit(SET_AUTH, userInfo);
+          if (data.status != "ok" || data.status != "OK"){
+              commit(SET_ERROR, data);
+          }
+          return data
+      })
+  },
+  // 找回支付密码01校验验证码
+  [GET_FIND_PAY_PW]({commit},credentials){
+      return ApiService.post('/user/findUserPayPw',credentials).then(({data})=>{
+          if (data.status != "ok" || data.status != "OK"){
+              commit(SET_ERROR, data);
           }
           return data
       })

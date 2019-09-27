@@ -1,4 +1,4 @@
-import {GET_ORDERS, GET_TODAYLIST,GET_INCOMELIST} from "./actions.type";
+import {GET_ORDERS, GET_TODAYLIST} from "./actions.type";
 import {SET_ORDERS, SET_ERROR} from "./mutations.type";
 import ApiService from "@/service/api.service";
 

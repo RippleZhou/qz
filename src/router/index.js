@@ -64,6 +64,10 @@ export default new Router({
       path:'/findPayPw',
       name:'findPayPw',
       component: () => import("@/views/findPayPw.vue")
-    }
+    },{
+      path:'/setPawpwNext',
+      name:'setPawpwNext',
+      component: () => import("@/views/setPawpwNext.vue")
+      }
   ]
 });

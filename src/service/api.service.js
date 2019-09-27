@@ -1,5 +1,4 @@
 import Vue from "vue";
-import { API_URL } from "./config";
 
 const ApiService = {
   init() {
@@ -7,23 +6,23 @@ const ApiService = {
   },
 
   query(resource, params) {
-    return Vue.axios.get(resource, params).catch(error => {
+    return Vue.axios.get("/warden/"+resource, params).catch(error => {
       throw new Error(`ApiService ${error}`);
     });
   },
 
   get(resource, slug = "") {
-    return Vue.axios.get(`${resource}/${slug}`).catch(error => {
+    return Vue.axios.get("/warden/"+`${resource}/${slug}`).catch(error => {
       throw new Error(`ApiService ${error}`);
     });
   },
 
   post(resource, params) {
-    return Vue.axios.post(`${resource}`, params);
+    return Vue.axios.post("/warden/"+`${resource}`, params);
   },
 
   update(resource, slug, params) {
-    return Vue.axios.put(`${resource}/${slug}`, params);
+    return Vue.axios.put("/warden/"+`${resource}/${slug}`, params);
   },
 
   put(resource, params) {
@@ -31,7 +30,7 @@ const ApiService = {
   },
 
   delete(resource) {
-    return Vue.axios.delete(resource).catch(error => {
+    return Vue.axios.delete("/warden/"+resource).catch(error => {
       throw new Error(`ApiService ${error}`);
     });
   }

@@ -34,10 +34,7 @@
 //qz_login.less
 import common from '@/utils/common'
 import Headers from '@/components/Headers'
-import { GET_CAPTCHA } from '@/store/actions.type'
 import signJs from '@/utils/sign'
-import { constants } from 'crypto'
-// import ApiService from '@/service/api.service'
 export default {
   name: 'findPassword',
   components: { Headers },
@@ -91,7 +88,7 @@ export default {
             let params = signJs.miscellaneous.signedParams(data)
             _this.$axios
               .get(
-                `${'/common/getmsAuthCode'}?cellPhone=${
+                `${'/warden/common/getmsAuthCode'}?cellPhone=${
                   params.cellPhone
                 }&type=${params.type}&sign=${params.sign}&token=${token}`,
                 {},
@@ -109,7 +106,7 @@ export default {
                 }
               })
               .catch(error => {
-                // console.log(error)
+                console.log(error)
               })
           }
         })
@@ -139,7 +136,7 @@ export default {
       } else {
         _this.$axios
           .post(
-            'user/resetPassWord',
+            '/warden/user/resetPassWord',
             signJs.miscellaneous.signedParams(data)
           )
           .then(res => {

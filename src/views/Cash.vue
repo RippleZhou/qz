@@ -56,7 +56,8 @@ export default {
       setTitle: "提现",
       pwShow:false,
       showKeyboard: false,
-      value:''
+      value:'',
+      isType:0,//1忘记0设置
     };
   },
   watch: {
@@ -119,6 +120,7 @@ export default {
           Toast('提现金额超出可提现余额了！');
           return
       }
+      let _this =this
       const router = this.$router;
       //检查用户有没有设置支付密码
       if (!this.user.isSettingPayPw) {
@@ -128,6 +130,7 @@ export default {
         })
           .then(() => {
             // on confirm
+            localStorage.setItem("isType",_this.isType)
             console.log(router)
             router.push('/setPayPw')
           })

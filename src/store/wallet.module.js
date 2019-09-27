@@ -4,10 +4,7 @@ import {
     GET_WITHDRAWCASH,
 } from "./actions.type";
 import {
-    SET_AUTH,
     SET_ERROR,
-    SET_INCOME,
-    SET_WITHDRAW,
     SET_WITHDRAWCASH,
 } from "./mutations.type";
 import ApiService from "@/service/api.service";
